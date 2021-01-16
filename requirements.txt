@@ -21,13 +21,13 @@ jinxed==1.0.1
 joblib==1.0.0
 multiprocess==0.70.11.1
 mysqlclient==2.0.3
-nltk==3.5
+nltk
 Pillow==8.0.0
 pycparser==2.20
 python-dateutil==2.8.1
 python-decouple==3.3
 pytz==2020.1
-rake-nltk==1.0.4
+rake-nltk
 regex==2020.11.13
 requests==2.25.0
 six==1.15.0
