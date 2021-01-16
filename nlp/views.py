@@ -24,12 +24,12 @@ def extract_keyphrases_from_text(request):
 
         body_unicode = request.body.decode('utf-8')
         body = json.loads(body_unicode)
-        if body['textIn'] is None:
+        if body['data'] is None:
             return json.dumps({"rank_list": ""})
 
-        final = extract_key_phrases_from_text(body['textIn'])
+        final = extract_key_phrases_from_text(body['data'])
 
-        nlprecord = record(input_text=body['textIn'], output_text=json.dumps({"rank_list": final}))
+        nlprecord = record(input_text=body['data'], output_text=json.dumps({"rank_list": final}))
 
         nlprecord.save()
 
@@ -44,12 +44,12 @@ def extract_summary_from_text(request):
 
         body_unicode = request.body.decode('utf-8')
         body = json.loads(body_unicode)
-        if body['textIn'] is None:
+        if body['data'] is None:
             return json.dumps({"rank_list": ""})
 
-        final = generate_summary(body['textIn']).replace("  "," ")
+        final = generate_summary(body['data']).replace("  "," ")
 
-        nlprecord = record(input_text=body['textIn'], output_text=final)
+        nlprecord = record(input_text=body['data'], output_text=final)
 
         nlprecord.save()
 
