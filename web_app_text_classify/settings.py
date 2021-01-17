@@ -10,14 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-
 from pathlib import Path
 from decouple import config
+import mimetypes
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -28,7 +27,6 @@ SECRET_KEY = 'pn#3u#gdk)$i2&%+#0*0jj^2vp(0=c5ladgt^2dl+4x-)h^@4@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = ["*"]
-
 
 # Application definition
 
@@ -45,6 +43,7 @@ INSTALLED_APPS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -74,21 +73,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'web_app_text_classify.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DBNAME',default='TextClassify'),
-        'USER': config('DBUSERNAME',default='TextClassify'),
-        'PASSWORD': config('DBPASSWORD',default='Basappa123)'),
-        'HOST': config('DBHOST',default='127.0.0.1'),
-        'PORT': config('DBPORT',default=3306),
+        'NAME': config('DBNAME', default='TextClassify'),
+        'USER': config('DBUSERNAME', default='TextClassify'),
+        'PASSWORD': config('DBPASSWORD', default='Basappa123)'),
+        'HOST': config('DBHOST', default='127.0.0.1'),
+        'PORT': config('DBPORT', default=3306),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -108,7 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -124,7 +120,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-import mimetypes
+
+
 mimetypes.add_type("text/css", ".css", True)
 mimetypes.add_type("text/javascript", ".js", True)
 mimetypes.add_type("text/html", ".html", True)
@@ -141,4 +138,3 @@ Q_CLUSTER = {
     'workers': 4,
     "orm": "default",  # Use Django's ORM + database for broker
 }
-
