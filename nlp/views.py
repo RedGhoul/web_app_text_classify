@@ -33,7 +33,7 @@ def extract_keyphrases_from_text(request):
 
         nlprecord.save()
 
-        return JsonResponse(json.dumps({"rank_list": final}),safe=False)
+        return HttpResponse(str(json.dumps({"rank_list": final})))
     else:
         return HttpResponse("Nothing found")
 
@@ -53,7 +53,7 @@ def extract_summary_from_text(request):
 
         nlprecord.save()
 
-        return JsonResponse(json.dumps({"SummaryText":final}), safe=False)
+        return HttpResponse(str(json.dumps({"SummaryText":final})))
     else:
         return HttpResponse("Nothing found")
 
