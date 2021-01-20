@@ -5,6 +5,11 @@ import json
 from .NLTKProcessor import extract_key_phrases_from_text, generate_summary
 from django.views.decorators.csrf import csrf_exempt
 
+
+def index(request):
+    return render(request,"nlp/index.html", context={})
+
+
 def create_api_stat(name):
     cur_api_stat = apistat.objects.filter(name=name).first()
     if cur_api_stat is not None:
@@ -13,9 +18,6 @@ def create_api_stat(name):
     else:
         new_apistat = apistat(name=name, hit_count=1)
         new_apistat.save()
-
-def index(request):
-    return HttpResponse("Test Classify")
 
 @csrf_exempt
 def extract_keyphrases_from_text(request):
