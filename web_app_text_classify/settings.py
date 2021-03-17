@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import psycopg2.extensions
 import mimetypes
 import os
 
@@ -78,12 +79,15 @@ WSGI_APPLICATION = 'web_app_text_classify.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('DBNAME', default='TextClassify'),
-        'USER': config('DBUSERNAME', default='TextClassify'),
-        'PASSWORD': config('DBPASSWORD', default='Basappa123)'),
+        'USER': config('DBUSERNAME', default='postgres'),
+        'PASSWORD': config('DBPASSWORD', default='34e5d10fc71541e786ed75bf8e6b48bc'),
         'HOST': config('DBHOST', default='127.0.0.1'),
-        'PORT': config('DBPORT', default=3306),
+        'PORT': config('DBPORT', default=5432),
+        'OPTIONS': {
+            'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
+        },
     }
 }
 
