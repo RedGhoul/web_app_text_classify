@@ -79,15 +79,13 @@ WSGI_APPLICATION = 'web_app_text_classify.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config('DBNAME', default='TextClassify'),
-        'USER': config('DBUSERNAME', default='postgres'),
-        'PASSWORD': config('DBPASSWORD', default='34e5d10fc71541e786ed75bf8e6b48bc'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DBNAME', default='textclassify'),
+        'USER': config('DBUSERNAME', default='root'),
+        'PASSWORD': config('DBPASSWORD', default=''),
         'HOST': config('DBHOST', default='127.0.0.1'),
-        'PORT': config('DBPORT', default=5432),
-        'OPTIONS': {
-            'isolation_level': psycopg2.extensions.ISOLATION_LEVEL_SERIALIZABLE,
-        },
+        'PORT': config('DBPORT', default=3306),
+        'OPTIONS': {'ssl': True, 'charset': 'utf8mb4'},
     }
 }
 

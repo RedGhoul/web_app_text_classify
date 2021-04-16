@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc54b8c5-1cf2-4007-90db-e65283a2f433" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/nlp/comeingsoon.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/NLTKProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/NLTKProcessor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nlp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/migrations/0002_apistat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nlp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nlp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nlp/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nlp/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nlp/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nlp/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nlp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nlp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_app_text_classify/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app_text_classify/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,11 +44,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -88,7 +99,9 @@
       <workItem from="1612622469803" duration="287000" />
       <workItem from="1612622776098" duration="46000" />
       <workItem from="1612622833345" duration="1415000" />
-      <workItem from="1615941822668" duration="917000" />
+      <workItem from="1615941822668" duration="2657000" />
+      <workItem from="1616038290101" duration="15000" />
+      <workItem from="1618516939012" duration="3920000" />
     </task>
     <task id="LOCAL-00001" summary="Added real pages">
       <created>1611181324614</created>
