@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc54b8c5-1cf2-4007-90db-e65283a2f433" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/nlp/comeingsoon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nlp/tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/NLTKProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/NLTKProcessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nlp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nlp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nlp/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nlp/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nlp/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nlp/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nlp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nlp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_app_text_classify/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_app_text_classify/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -101,7 +88,7 @@
       <workItem from="1612622833345" duration="1415000" />
       <workItem from="1615941822668" duration="2657000" />
       <workItem from="1616038290101" duration="15000" />
-      <workItem from="1618516939012" duration="3920000" />
+      <workItem from="1618516939012" duration="6318000" />
     </task>
     <task id="LOCAL-00001" summary="Added real pages">
       <created>1611181324614</created>
