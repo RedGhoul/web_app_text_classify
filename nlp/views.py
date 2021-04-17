@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.conf.urls import handler404
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import record
 import json
 from .NLTKProcessor import extract_key_phrases_from_text, generate_summary
 from django.views.decorators.csrf import csrf_exempt
-
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 
 def index(request):
     return render(request, "nlp/index.html", context={})
@@ -12,6 +14,21 @@ def index(request):
 
 def coming_soon(request):
     return render(request, "nlp/comeingsoon.html", context={})
+
+
+def register_user(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        user = User.objects.create_user(username, email, password)
+        if user is not None:
+            login(request, user)
+            return redirect("nlp:index")
+        else:
+            return handler404(request)
+    else:
+        return render(request, "nlp/register.html", context={})
 
 @csrf_exempt
 def extract_key_phrases_from_text(request):

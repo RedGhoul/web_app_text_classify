@@ -10,5 +10,5 @@ def generate_aggregate():
            FROM textclassify.nlp_record group by `day_logged`,api_name
     ''')
     row = cursor.fetchone()
-    rec_agg = record_aggregate(api_name=row['count'],api_name=row['count'],created_at=row)
+    #rec_agg = record_aggregate(api_name=row['count'],api_name=row['count'],created_at=row)
 

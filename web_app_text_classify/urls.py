@@ -22,6 +22,8 @@ from web_app_text_classify.settings import STATIC_URL, STATIC_ROOT
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("accounts/signup/", views.register_user, name="register"),
+    path('accounts/', include('django.contrib.auth.urls')),
     path("nlp/", include('nlp.urls')),
     path('admin/', admin.site.urls),
 ] + static(STATIC_URL, document_root=STATIC_ROOT)

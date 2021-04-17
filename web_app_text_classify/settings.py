@@ -139,3 +139,6 @@ Q_CLUSTER = {
     'workers': 4,
     "orm": "default",  # Use Django's ORM + database for broker
 }
+LOGIN_URL =  'nlp:index'
+LOGIN_REDIRECT_URL = 'nlp:index'
+LOGOUT_REDIRECT_URL = 'nlp:index'
