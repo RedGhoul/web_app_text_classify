@@ -31,7 +31,7 @@ def register_user(request):
         return render(request, "nlp/register.html", context={})
 
 @csrf_exempt
-def extract_key_phrases_from_text(request):
+def extract_key_phrases_from_text_view(request):
     if request.method == 'POST':
         body_unicode = request.body.decode('utf-8')
         body = json.loads(body_unicode)
@@ -51,7 +51,7 @@ def extract_key_phrases_from_text(request):
 
 
 @csrf_exempt
-def extract_summary_from_text(request):
+def extract_summary_from_text_view(request):
     if request.method == 'POST':
 
         body_unicode = request.body.decode('utf-8')
