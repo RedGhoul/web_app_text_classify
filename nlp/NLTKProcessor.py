@@ -6,8 +6,8 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from summarizer import Summarizer
 
-summary_model = Summarizer()
-analyzer = SentimentIntensityAnalyzer()
+
+
 
 '''
 https://github.com/cjhutto/vaderSentiment
@@ -27,7 +27,7 @@ IMPORTANTLY: these proportions represent the "raw categorization" of each lexica
 
 '''
 def extract_sentiment(TextIn):
-
+    analyzer = SentimentIntensityAnalyzer()
     vs = analyzer.polarity_scores(TextIn)
     return vs
 
@@ -55,7 +55,7 @@ def extract_summary_from_text(TextIn, min_length=20):
     html_free_text = soup.get_text()
     html_free_text.replace("-", "")
     html_free_text = html_free_text.strip()
-
+    summary_model = Summarizer()
     result = summary_model(html_free_text, min_length=min_length)
     return result
 
