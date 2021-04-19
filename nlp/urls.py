@@ -17,8 +17,11 @@ urlpatterns = [
          name="comingsoon"),
     path("extract_keyphrases_from_text",
          views.extract_key_phrases_from_text_view,
-         name="extract_keyphrases_from_text"),
+         name="extract_key_phrases_from_text"),
     path("extract_summary_from_text",
          views.extract_summary_from_text_view,
-         name="extract_summary_from_text")
+         name="extract_summary_from_text"),
+    path("extract_sentiment_from_text",
+         views.extract_sentiment_from_text_view,
+         name="extract_sentiment_from_text")
 ]
