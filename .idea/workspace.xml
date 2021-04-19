@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc54b8c5-1cf2-4007-90db-e65283a2f433" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="dc54b8c5-1cf2-4007-90db-e65283a2f433" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +90,7 @@
       <workItem from="1615941822668" duration="2657000" />
       <workItem from="1616038290101" duration="15000" />
       <workItem from="1618516939012" duration="6318000" />
-      <workItem from="1618627889669" duration="11482000" />
+      <workItem from="1618627889669" duration="12113000" />
     </task>
     <task id="LOCAL-00001" summary="Added real pages">
       <created>1611181324614</created>
