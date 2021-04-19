@@ -5,7 +5,7 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize, sent_tokenize
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from summarizer import Summarizer
-
+import gc
 
 
 
@@ -29,6 +29,7 @@ IMPORTANTLY: these proportions represent the "raw categorization" of each lexica
 def extract_sentiment(TextIn):
     analyzer = SentimentIntensityAnalyzer()
     vs = analyzer.polarity_scores(TextIn)
+    gc.collect()
     return vs
 
 
@@ -57,6 +58,7 @@ def extract_summary_from_text(TextIn, min_length=20):
     html_free_text = html_free_text.strip()
     summary_model = Summarizer()
     result = summary_model(html_free_text, min_length=min_length)
+    gc.collect()
     return result
 
 
