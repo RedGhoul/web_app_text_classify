@@ -27,7 +27,7 @@ RUN pip3 install --upgrade pip
 
 RUN pip install -r requirements.txt
 RUN pip3 install torch==1.8.1+cpu torchvision==0.9.1+cpu torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
-RUN python && from summarizer import Summarizer && model = Summarizer()
+RUN (echo "from summarizer import Summarizer" ; echo "model = Summarizer()") | python
 # Install project dependencies
 # RUN pipenv install --skip-lock --system --dev
 
