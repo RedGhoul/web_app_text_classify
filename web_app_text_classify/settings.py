@@ -136,7 +136,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # More details https://django-q.readthedocs.io/en/latest/configure.html
 Q_CLUSTER = {
     "name": "basic",
-    'workers': 4,
+    'workers': 1,
     "orm": "default",  # Use Django's ORM + database for broker
 }
 LOGIN_URL =  'nlp:index'

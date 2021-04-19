@@ -35,5 +35,5 @@ EXPOSE 8080
 
 RUN python manage.py collectstatic --noinput
 
-CMD gunicorn web_app_text_classify.wsgi:application --timeout 600 --workers=8 --bind 0.0.0.0:8080 & python manage.py qcluster
+CMD gunicorn web_app_text_classify.wsgi:application --timeout 600 --workers=4 --bind 0.0.0.0:8080 & python manage.py qcluster
 
