@@ -56,10 +56,10 @@ def extract_summary_from_text(TextIn, min_length=20):
     html_free_text = soup.get_text()
     html_free_text.replace("-", "")
     html_free_text = html_free_text.strip()
-    summary_model = Summarizer()
-    result = summary_model(html_free_text, min_length=min_length)
+    #summary_model = Summarizer()
+    #result = summary_model(html_free_text, min_length=min_length)
     gc.collect()
-    return result
+    return html_free_text
 
 
 
