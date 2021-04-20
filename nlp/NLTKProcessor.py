@@ -4,7 +4,6 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize, sent_tokenize
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from summarizer import Summarizer
 import gc
 
 
@@ -49,19 +48,6 @@ def extract_key_phrases_from_text(TextIn):
         final.append(newDic)
 
     return final
-
-# https://pypi.org/project/bert-extractive-summarizer/
-def extract_summary_from_text(TextIn, min_length=20):
-    soup = BeautifulSoup(TextIn, "html.parser")
-    html_free_text = soup.get_text()
-    html_free_text.replace("-", "")
-    html_free_text = html_free_text.strip()
-    #summary_model = Summarizer()
-    #result = summary_model(html_free_text, min_length=min_length)
-    gc.collect()
-    return html_free_text
-
-
 
 def read_article(Text):
     text_in = Text.split('. ')

@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import record
 import json
-from .NLTKProcessor import extract_key_phrases_from_text, generate_summary, extract_summary_from_text, extract_sentiment
+from .NLTKProcessor import extract_key_phrases_from_text, generate_summary, extract_sentiment
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
