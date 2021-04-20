@@ -1,3 +1,5 @@
+import re
+
 from django.conf.urls import handler404
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -59,7 +61,10 @@ def extract_summary_from_text_view(request):
         if body['data'] is None:
             return json.dumps({"error" : "No Data Found"})
 
-        final = extract_summary_from_text(body['data']).replace("  ", " ")
+        text_in = re.sub(r'\[[0-9]*\]', ' ', body['data'])
+        text_in = re.sub(r'\s+', ' ', text_in).replace("  ", " ")
+
+        final = generate_summary(text_in)
 
         nlprecord = record(api_name="extract_summary_from_text", input_text=body['data'], output_text=final)
 
