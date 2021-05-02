@@ -1,22 +1,11 @@
 version: 2.1
 
-orbs:
-  python: circleci/python@1.3.8
-
 jobs:
-  build-and-test:
-    executor: python/default
+  build:
+    docker:
+      - image: python:3.8
     steps:
       - checkout
       - run:
-          command: ./manage.py test
-          name: Test
-
-workflows:
-  version: 2
-  main:
-    jobs:
-      - build-and-test:
-          filters:
-            branches:
-              only: master
+          name: build
+          command: docker build -t wev .
